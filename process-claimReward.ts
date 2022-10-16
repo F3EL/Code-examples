@@ -71,7 +71,6 @@ const main = async () => {
             as any;
             item.round_id = enteredArenaStates[i].parsedArenaId;
 
-            if (item.round_id != "50979") {
                 item.variation = enteredArenaStates[i].parsedFinalPrice - enteredArenaStates[i].parsedLockedPrice;
                 const userBetState = userBetStateAccounts.find((acc: any) => acc.account.parsedArenaId == item.round_id);
                 item.kindofbet = userBetState?.account.isUp ? 'up' : 'down';
@@ -137,7 +136,7 @@ const main = async () => {
                     } catch {
                         console.log('error')
                     }
-                }
+                
             }
         }
         process.exit(1);
